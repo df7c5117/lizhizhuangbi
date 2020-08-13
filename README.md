@@ -12,6 +12,10 @@
 
 ![](./screenshot.png)
 
+### 情況屬實
+
+## 免責聲明：僅供娛樂 請勿弄個大新聞 請勿捕風捉影 請勿不負責任傳播
+
 ### 相關項目
 
 [南京李志bot](https://github.com/df7c5117/NanjingLizhiBot)

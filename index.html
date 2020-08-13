@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>裝逼大師</title>
+<link rel="shortcut icon" href="./favicon.ico" /> 
+<style>
+@font-face {
+	font-family: 'wbficonregular';
+    src: url("./wbficon.eot?id=201811011533") ;
+    src: url("./wbficon.eot?id=201811011533")  format('embedded-opentype'),url("./wbficon.svg?id=201811011533")  format('svg'),url("./wbficon.woff?id=201811011533")  format('woff'),url("./wbficon.ttf?id=201811011533")  format('truetype');
+	src: url("./wbficon.eot?id=201811011533") \9;    font-weight: normal;
+    font-style: normal;
+}
+body {
+	width: 600px;
+	min-height: 500px;
+	margin: 0 auto;
+	padding: 16px 0 0 0;
+    background-color: #eee;
+    font: 12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    overflow-x: hidden;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+.f {
+    font-size: 15px;
+    color: #124969;
+}
+input {
+    background: #b4daf0;
+    border-bottom: 1px solid #000;
+    width: 150px;
+    height: 24px;
+    padding: 0 8px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+	outline:none;
+}
+input::-webkit-input-placeholder{
+    color:#75accc
+}
+
+textarea {
+    height: 100px;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    overflow: auto;
+    color: #555;
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.button {
+margin: 10px 0;
+    padding: 0px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 100%!important;
+    transition: 0s;
+    background: #ff8140 none repeat scroll 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
+}
+.button:hover {
+    background: #f7671d none repeat scroll 0 0;
+    color: #fff;
+}
+.button:active {
+    background: #de6f36 none repeat scroll 0 0;
+    color: #fff;
+}
+.weibo_main {
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+}
+.weibo_c {
+    padding: 20px 20px 4px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 600px;
+}
+.weibo_face {
+    position: relative;
+    width: 50px;
+    float: left;
+}
+.weibo_face_radius {
+    border-radius: 50%;
+}
+.weibo_detail {
+    margin-left: 60px;
+}
+.weibo_info {
+    margin-bottom: 7px;
+    padding: 5px 0 0;
+}
+.weibo_info_name {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+.weibo_approve {
+    background-image: url(./steps_gold.png);
+    background-size: 475px 14px;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-left: 3px;
+    vertical-align: -2px;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+}
+.vip {
+    display: inline-block;
+    background-image: url(./icon.png);
+    background-repeat: no-repeat;
+    background-position: -25px -125px;
+    width: 16px;
+    height: 14px;
+    vertical-align: -2px;
+    margin-left: 3px;
+}
+a{
+    color: #808080;
+    text-decoration: none;
+}
+a:hover{
+    color: #eb7350;
+}
+.weibo_from {
+    margin-bottom: 2px;
+    color: #808080;
+    text-decoration: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    font-size: 12px;
+    display: inline-block;
+}
+.weibo_text {
+    margin-bottom: 2px;
+    padding-bottom: 0;
+    padding: 1px 0 3px;
+    overflow: hidden;
+    line-height: 23px;
+    word-wrap: break-word;
+    letter-spacing: normal;
+    word-spacing: normal;
+    font-size: 14px;
+}
+.weibo_b_handle {
+    overflow: hidden;
+}
+ul {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #f2f2f5;
+    margin: 0 0 0 -1px;
+    zoom: 1;
+    padding: 0;
+}
+ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+li {
+    width: 25%;
+    float: left;
+    height: 38px;
+    list-style: none;
+}
+.pos {
+    margin: 0 0 0 1px;
+    padding: 1px 0;
+    color: #808080;
+    text-decoration: none;
+    display: block;
+    margin-left: -1px;
+    text-align: center;
+}
+.line {
+    display: block;
+    height: 22px;
+    margin: 7px 0;
+    border-left-width: 1px;
+    border-left-style: solid;
+    line-height: 22px;
+    border-color: #d9d9d9;
+}
+.S_ficon {
+    font-family: "wbficonregular" !important;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    vertical-align: top;
+    margin-left: 2px;
+    margin-right: 3px;
+    color: #696e78;
+}
+em{
+    font-style: normal;
+    font-weight: normal;
+}
+.weibo_url{
+    color: #eb7350;
+}
+.weibo_s_l {
+    float: left;
+    padding-bottom: 5px;
+}
+.weibo_s_r {
+    float: right;
+    color: #124969;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.share_btn_inner {
+    background: url(http://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_btn.png?id=1375775002754) no-repeat;
+    display: inline-block;
+    width: 62px;
+    height: 22px;
+}
+.ico_share_btn {
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin: 3px 0 0 3px;
+    background: url(http://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon.png?id=1375775002754) 0 0 no-repeat;
+}
+.share_text {
+    float: left;
+    width: 40px;
+    height: 16px;
+    padding: 4px 0 3px 3px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-style: normal!important;
+}
+</style>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+<body>
+<div class="weibo" id="weibo">
+	<div class="weibo_main">
+		<div class="weibo_c">
+			<div class="weibo_face">
+				<div class="face">
+					<a class="weibo_face_radius" href="index.html#" title="南京李志">
+						<img src="./njlz.jpg" width="50" height="50" alt="南京李志" class="weibo_face_radius">
+					</a>
+				</div>
+			</div>
+			<div class="weibo_detail">
+				<div class="weibo_info">
+					<a href="index.html#" class="weibo_info_name">南京李志</a>
+					<a href="index.html#"><i title="微博个人认证 " class="weibo_approve"></i></a>
+					<a title="微博会员" href="index.html#"><em class="vip"></em></a>
+				</div>
+				<div class="weibo_from">
+					<a href="index.html#" class="S_txt2 time" > 11月13日 03:34</a>
+					来自 
+					<a class="S_txt2" href="index.html#">iPhone X</a>
+				</div>
+				<div class="weibo_text" contenteditable="true">
+					你是那個傻逼
+				</div>
+			</div>
+		</div>
+		<div class="weibo_b">
+			<div class="weibo_b_handle">
+				<ul>
+					<li><span class="pos"><span class="line"><span><em class="S_ficon">û</em><em>收藏</em></span></span></span></li>
+					<li><span class="pos"><span class="line"><span><em class="S_ficon"></em><em>1990</em></span></span></span></li>
+					<li><span class="pos"><span class="line"><span><em class="S_ficon"></em><em>评论</em></span></span></span></li>
+					<li><span class="pos"><span class="line"><span><em class="S_ficon">ñ</em><em>334334</em></span></span></span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="f">
+<a href="#" class="button" onclick="zhuangbi();">立即裝逼</a>
+</div>
+</body>
+
+
+<script>
+function zhuangbi(){
+	html2canvas(document.getElementById("weibo"), {
+		allowTaint: true,
+		taintTest: false,
+		onrendered:function(canvas){
+			canvas.id = "mycanvas";
+			//生成base64图片数据
+			var dataUrl = canvas.toDataURL();
+			var newImg = document.createElement("img");
+			newImg.src = dataUrl;
+			document.body.appendChild(newImg);
+			alert("成功\n请长按或右键下图以保存");
+		}
+	});
+}
+</script>
+</html>
